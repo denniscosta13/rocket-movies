@@ -6,7 +6,7 @@ export const Container = styled.span`
     color: ${({ theme }) => theme.COLORS.GRAY_100};
     text-align: center;
 
-    background-color: ${({ theme, $ondetails }) => $ondetails === 'true' ? theme.COLORS.BACKGROUND_600 : theme.COLORS.WINE};
+    background-color: ${({ theme, $ondetails }) => $ondetails === 'true' ? theme.COLORS.WINE : theme.COLORS.BACKGROUND_600};
 
     padding: 0.8rem 1.6rem;
 

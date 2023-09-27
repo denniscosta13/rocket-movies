@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 
 
 
-import { Header } from './components/Header' 
-import { Tag } from './components/Tag' 
+import { Details } from './Pages/Details'
+
 
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from './styles/global'
@@ -14,9 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={ theme }>
       <GlobalStyles />
-      <Header />
-      <Tag onDetails title="react"/>
-      <Tag  title="react"/>
+      <Details />
     </ThemeProvider>
   </React.StrictMode>,
 )
