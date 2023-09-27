@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import { FiArrowLeft} from 'react-icons/fi'
 
 
 import { Header } from './components/Header' 
-import { StarRate } from './components/StarRate' 
+import { Tag } from './components/Tag' 
 
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from './styles/global'
@@ -16,7 +15,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <ThemeProvider theme={ theme }>
       <GlobalStyles />
       <Header />
-      <StarRate rating={3} />
+      <Tag onDetails title="react"/>
+      <Tag  title="react"/>
     </ThemeProvider>
   </React.StrictMode>,
 )

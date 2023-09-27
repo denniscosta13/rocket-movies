@@ -1,6 +1,7 @@
 export default {
     COLORS: {
         PINK: "#FF859B",
+        WINE: "#282124",
         WHITE: "#F4EDE8",
 
         BACKGROUND_600: "#312E38",
