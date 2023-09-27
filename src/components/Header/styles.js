@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.header`
+    grid-area: header;
+
     width: 100%;
     height: 11.5rem;
 
@@ -27,5 +29,34 @@ export const Container = styled.div`
 `
 
 export const Profile = styled.div`
+    display: flex;
+    align-items: center;
+    gap: .8rem;
 
-`
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: max-content;
+
+        line-height: 2.4rem;
+
+        strong {
+            font-size: 1.4rem;
+        }
+        
+        span {
+            text-decoration: none;
+            color: ${({theme}) => theme.COLORS.GRAY_300};
+            font-size: 1.4rem;
+        }
+    }
+    
+
+    > img {
+        width: 6.4rem;
+        border-radius: 50%;
+        border: 1px solid ${({theme}) => theme.COLORS.GRAY_400}; 
+    }
+
+    `
