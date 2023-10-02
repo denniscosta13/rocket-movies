@@ -10,9 +10,9 @@ export const Container = styled.button`
     text-align: center;
     font-size: 1.6rem;
     font-weight: 500;
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+    color: ${({ theme, $deletebtn }) => $deletebtn === "true" ? theme.COLORS.PINK : theme.COLORS.BACKGROUND_600};
 
-    background-color: ${({ theme }) => theme.COLORS.PINK};
+    background-color: ${({ theme, $deletebtn  }) => $deletebtn === "true" ? theme.COLORS.BACKGROUND_900 : theme.COLORS.PINK};
 
     &:disabled {
         opacity: 0.5;

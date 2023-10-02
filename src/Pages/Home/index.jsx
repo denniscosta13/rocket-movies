@@ -3,7 +3,7 @@ import { FiPlus } from 'react-icons/fi'
 import { Container, Content } from './styles'
 
 import { Header } from '../../components/Header'
-import { Movie } from '../../components/Movie'
+import { MovieReview } from '../../components/MovieReview'
 
 export function Home() {
     return (
@@ -21,7 +21,7 @@ export function Home() {
                 </header>
 
                 <Content>
-                    <Movie data={{
+                    <MovieReview data={{
                         title: 'Interstellar',
                         rating: '5',
                         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?',
@@ -32,7 +32,7 @@ export function Home() {
                         ]
                     }} />
 
-                    <Movie data={{
+                    <MovieReview data={{
                         title: 'Spider-man',
                         rating: '4',
                         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?',

@@ -3,7 +3,7 @@ import { Container } from "./styles";
 import { StarRate } from '../StarRate'
 import { Tag } from '../Tag'
 
-export function Movie({ data, ...rest}) {
+export function MovieReview({ data, ...rest}) {
     return (
         <Container {...rest}>
             <h1>{data.title}</h1>

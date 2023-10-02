@@ -25,6 +25,7 @@ export const Container = styled.div`
 
         &::placeholder {
             color: ${({ theme }) => theme.COLORS.GRAY_300};
+            font-family: 'Roboto', sans-serif;
         }
     }
 
@@ -32,4 +33,5 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.COLORS.GRAY_300};
         margin-left: 1.6rem;
     } 
+
 `
