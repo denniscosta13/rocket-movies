@@ -4,7 +4,7 @@ export const  Container = styled.div`
     width: 100%;
     height: 100vh;
 
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
     
     
@@ -13,6 +13,15 @@ export const  Container = styled.div`
         background-color: #FF859B0D;
 
         padding: 6.4rem 0 6.4rem calc(7vw + 1rem) ;
+
+        a {
+            color: ${({theme}) => theme.COLORS.PINK};
+            font-size: 1.6rem;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
     }
 `
 

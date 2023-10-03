@@ -1,6 +1,6 @@
 import { FiSearch } from "react-icons/fi";
 
-import { Container, Profile } from "./styles";
+import { Container, Profile, Logo } from "./styles";
 
 import { Input } from '../Input'
 
@@ -8,9 +8,11 @@ import { Input } from '../Input'
 export function Header() {
     return (
         <Container>
-            <h1>RocketMovies</h1>
+            <Logo to="/">
+                <h1>RocketMovies</h1>
+            </Logo>
             <Input Icon={FiSearch} type="text" placeholder="Pesquisar pelo título" />
-            <Profile>
+            <Profile to="/profile">
                 <div>
                     <strong>Dennis Costa</strong>
                     <span>sair</span>

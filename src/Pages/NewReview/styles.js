@@ -32,6 +32,14 @@ export const Form = styled.form`
         h1 {
             margin-top: 2.4rem;
         }
+
+        a {
+            color: ${({theme}) => theme.COLORS.PINK};
+            font-size: 1.6rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
     }
 
     > input:first-child {
@@ -49,7 +57,7 @@ export const Form = styled.form`
         color: ${({ theme }) => theme.COLORS.PINK};
     }
 
-    > button:nth-child(2) {
+    > button:last-child {
         grid-area: 5 / 2 / 6 / 3;
     }
 

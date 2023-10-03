@@ -1,6 +1,6 @@
 import { FiPlus } from 'react-icons/fi'
 
-import { Container, Content } from './styles'
+import { Container, Content, NewButton } from './styles'
 
 import { Header } from '../../components/Header'
 import { MovieReview } from '../../components/MovieReview'
@@ -14,10 +14,12 @@ export function Home() {
 
                 <header>
                     <h1>Meus filmes</h1>
-                    <button type="button">
+
+                    <NewButton to="/new"> 
                         <FiPlus />
                         <span>Adicionar filme</span>
-                    </button>
+                    </NewButton>
+
                 </header>
 
                 <Content>

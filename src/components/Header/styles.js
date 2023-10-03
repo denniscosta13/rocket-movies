@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.header`
@@ -17,10 +18,6 @@ export const Container = styled.header`
     border-bottom: 1px solid;
     border-bottom-color: ${({theme}) => theme.COLORS.GRAY_400};
 
-    > h1 {
-        color: ${({theme}) => theme.COLORS.PINK};
-        font-size: 2.4rem;
-    }
 
     > img {
         width: 6.4rem;
@@ -28,7 +25,7 @@ export const Container = styled.header`
     }
 `
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
     display: flex;
     align-items: center;
     gap: .8rem;
@@ -43,6 +40,7 @@ export const Profile = styled.div`
 
         strong {
             font-size: 1.4rem;
+            color: ${({theme}) => theme.COLORS.WHITE}
         }
         
         span {
@@ -60,3 +58,10 @@ export const Profile = styled.div`
     }
 
     `
+
+export const Logo = styled(Link)`
+    > h1 {
+        color: ${({theme}) => theme.COLORS.PINK};
+        font-size: 2.4rem;
+    }
+`

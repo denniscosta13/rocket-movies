@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -35,21 +36,6 @@ export const Container = styled.div`
                 font-weight: 400;
             }
 
-            button {
-                display: flex;
-                align-items: center;
-                gap: .8rem;
-
-                height: 4.8rem;
-
-                background-color: ${({ theme }) => theme.COLORS.PINK};
-
-                border: none;
-                border-radius: .8rem;
-
-                padding: 1.6rem 3.2rem;
-            }
-
             
         }
     } 
@@ -64,4 +50,22 @@ export const Content = styled.div`
     flex-direction: column;
     gap: 3.2rem;
 
+`
+
+export const NewButton = styled(Link) `
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    height: 4.8rem;
+
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+
+    border: none;
+    border-radius: .8rem;
+
+    padding: 1.6rem 3.2rem;
+
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    
 `
