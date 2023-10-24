@@ -25,7 +25,7 @@ export const Container = styled.header`
     }
 `
 
-export const Profile = styled(Link)`
+export const Profile = styled.div`
     display: flex;
     align-items: center;
     gap: .8rem;
@@ -38,20 +38,25 @@ export const Profile = styled(Link)`
 
         line-height: 2.4rem;
 
-        strong {
+        a {
             font-size: 1.4rem;
-            color: ${({theme}) => theme.COLORS.WHITE}
+            color: ${({theme}) => theme.COLORS.WHITE};
+            text-decoration: none;
+            font-weight: bold;
+
         }
         
-        span {
+        button {
             text-decoration: none;
             color: ${({theme}) => theme.COLORS.GRAY_300};
             font-size: 1.4rem;
+            border: none;
+            background: none;
         }
     }
     
 
-    > img {
+    > a img {
         width: 6.4rem;
         border-radius: 50%;
         border: 1px solid ${({theme}) => theme.COLORS.GRAY_400}; 
