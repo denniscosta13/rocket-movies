@@ -21,13 +21,14 @@ function AuthProvider({ children }) {
                 alert(error.response.data.message)
             }
 
-            alert('Não foi possível fazer login')
         }
     }
 
     function signOut() {
         localStorage.removeItem("@rocketmovies:user")
         localStorage.removeItem("@rocketmovies:token")
+
+        setData({})
     }
 
     useEffect(() => {
