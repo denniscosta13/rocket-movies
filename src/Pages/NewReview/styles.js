@@ -80,6 +80,7 @@ export const Form = styled.form`
         border-radius: 0.8rem;
 
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: flex-start;
         gap: 2.4rem;

@@ -4,11 +4,27 @@ import { Container, Content, NewButton } from './styles'
 
 import { Header } from '../../components/Header'
 import { MovieReview } from '../../components/MovieReview'
+import { useEffect, useState } from 'react'
+import { api } from '../../services/api'
 
 export function Home() {
+    const [reviews, setReviews] = useState([])
+    const [search, setSearch] = useState('')
+
+    useEffect(() => {
+        async function fetchReviews() {
+            const response = await api.get(`/movies?title=${search}`)
+            setReviews(response.data)
+        }
+
+        fetchReviews()
+    }, [search])
+
     return (
         <Container>
-            <Header />
+            <Header 
+                onChange={e => setSearch(e.target.value)}
+            />
 
             <main>
 
@@ -23,27 +39,27 @@ export function Home() {
                 </header>
 
                 <Content>
-                    <MovieReview data={{
-                        title: 'Interstellar',
-                        rating: '5',
-                        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?',
-                        tags: [
-                            { id: 1, name: 'outer space'},
-                            { id: 2, name: 'science'},
-                            { id: 3, name: 'adventure'}
-                        ]
-                    }} />
+                    {
+                        reviews.map(review => (
+                                <MovieReview
+                                    key={String(review.id)} 
+                                    data={{
+                                        title: review.title,
+                                        rating: String(review.rating),
+                                        description: review.description,
+                                        tags: review.movieTags
+                                        // tags: [
+                                        //     { id: 1, name: 'outer space'},
+                                        //     { id: 2, name: 'science'},
+                                        //     { id: 3, name: 'adventure'}
+                                        // ]
+                                    }} 
+                                />   
 
-                    <MovieReview data={{
-                        title: 'Spider-man',
-                        rating: '4',
-                        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quia, animi ratione quisquam error praesentium. Ullam dignissimos commodi rerum! Repellendus quibusdam doloribus magnam! Sint illum voluptas unde culpa amet nobis?',
-                        tags: [
-                            { id: 1, name: 'marvel'},
-                            { id: 2, name: 'heroes'},
-                            { id: 3, name: 'adventure'}
-                        ]
-                    }} />
+                            )
+                        )
+                    }
+                    
 
                     
                 </Content>
